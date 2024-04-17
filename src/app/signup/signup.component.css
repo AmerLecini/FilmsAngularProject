@@ -1,0 +1,18 @@
+
+.button{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link{
+    margin-top: 10px;
+}
+.button{
+    margin-top: 20px;
+}
+
+.container{
+    margin-top: 120px;
+}

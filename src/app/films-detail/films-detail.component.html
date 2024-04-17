@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="image">
+        <img [src]="filmsModel.imageUrl" class="img-responsive" alt="Film Image" />
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <ul class="list-group">
+            <li class="list-group-item">Name: {{ filmsModel.name }}</li>
+            <li class="list-group-item">Description: {{ filmsModel.description }}</li>
+            <li class="list-group-item">Type: {{ filmsModel.category }}</li>
+            <li class="list-group-item">State: {{ filmsModel.state }}</li>
+            <li class="list-group-item">Release Year: {{ filmsModel.releayseYear }}</li>
+          </ul>
+        </div>
+      </div>
+      <button class="btn btn-primary" (click)="goToHome()">Close</button>
+    </div>
+  </div>
+</div>

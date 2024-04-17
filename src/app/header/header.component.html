@@ -1,0 +1,18 @@
+<ng-container *ngIf="!isLoginPage() && !isSignupPage()">
+<nav id="nav">
+  <div class="navTop">
+    <div class="navItem">
+      <img src="https://static1.squarespace.com/static/558b12a4e4b09ef3bcc260fb/t/5a7b15018165f5e556930598/1518015747028/Clerkenwell.png?format=1500w"
+      width="150"
+      height="70" alt="" />
+    </div>
+    <div>
+      <h2 class="title"><b><a (click)="goToHeader()">Home</a></b></h2>
+    </div>
+    <div class="email_log">
+      <h4 class="white">{{userEmail}}</h4>
+      <a (click)="logout()"><h4 class="white"><b>Log Out</b></h4></a>
+    </div>
+  </div>
+</nav>
+</ng-container>

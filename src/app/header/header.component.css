@@ -1,0 +1,39 @@
+nav {
+    background-color: #111;
+    color: white;
+  }
+  
+  .navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .title{
+    cursor: pointer;
+  }
+  .email_log{
+    display: flex;
+  }
+  .item_films {
+    margin: 0 10px;
+    font-size: large;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+  }
+
+  .type_films{
+    margin-top:10px ;
+    margin-left: -100px;
+  }
+  
+  .white {
+    color: aliceblue;
+    padding-right: 10px;
+    cursor: pointer;
+  }
+  
+
+  
+  

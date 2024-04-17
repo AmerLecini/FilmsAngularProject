@@ -1,0 +1,15 @@
+<div class="body_films">
+    <ul class="list-unstyled">
+      <li class="media">
+        <img (click)="goToDetail(film.id)" class="listing-photo" [src]="film.imageUrl" alt="{{ film.name }}" />
+        <div class="media-body">
+          <h2 class="listing-heading"><b>{{ film.name }}</b></h2>
+          <p class="film_type">{{ film.category }}</p>
+          <div class="buttons">
+          <button class="btn btn-warning" (click)="goToEdit(film.id)">Edit</button>
+          <button class="btn btn-danger"(click)="goToDelete(film.id)">Delete</button>
+        </div>
+        </div>
+      </li>
+    </ul>
+  </div>

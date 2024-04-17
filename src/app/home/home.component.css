@@ -1,0 +1,79 @@
+.body {
+  background-color: #4a148c;
+  color: #fff;
+}
+
+.title{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.inputed {
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  background-color: transparent;
+  color: white;
+  padding: 8px 15px;
+}
+
+.nav{
+  background-color: rgb(89, 89, 131);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 0%;
+}
+
+
+
+.navItem{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.type_films {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item_films{
+  margin-right: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchInput {
+  margin-top: 10px;
+  margin-left: 30px;
+  border-radius: 8px;
+  flex: 1;
+  border: white;
+  background-color: aliceblue;
+  outline: none;
+  color: black;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.searchInput::placeholder {
+  color: black;
+}
+
+.film-list {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-around;
+}
