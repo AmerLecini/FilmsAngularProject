@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FilmsService } from 'src/app/films.service';
+import { FilmsService } from 'src/app/services/films.service';
 
 @Component({
   selector: 'app-add-films',

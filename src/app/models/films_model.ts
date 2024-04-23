@@ -6,4 +6,5 @@ export interface FilmsModel {
   state?: string;
   releayseYear?: string;
   imageUrl: string;
+  favorites?: string;
 }

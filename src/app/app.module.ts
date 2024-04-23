@@ -11,8 +11,8 @@ import { EditFilmsComponent } from './home/edit-films/edit-films.component';
 import { AddFilmsComponent } from './home/add-films/add-films.component';
 import { FilmsItemComponent } from './home/films-item/films-item.component';
 import { AppRoutingModule } from './app-routing.module';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 @NgModule({
   declarations: [

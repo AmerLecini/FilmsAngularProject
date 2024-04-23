@@ -1,0 +1,28 @@
+.container{
+    margin-top: 50px;
+}
+
+.listing-photo {
+    height: 500px;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 30px;
+    float: right;
+  }
+
+  .listing-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+  }
+  .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .section-heading{
+    text-decoration: underline;
+  } 

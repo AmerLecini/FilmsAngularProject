@@ -1,22 +1,28 @@
-  <div class="body">
-      <div class="nav">
-        <div>
-          <h3  class="new_recipe"><a routerLink="/add">Add Film</a></h3> 
-        </div>
-        <div>
-          <input type="text" placeholder="Search..." class="searchInput" #filter>
-          <button type="button" (click)="filterName(filter.value)"><i class="fas fa-search" style="font-size: 15px;"></i></button>
-        </div>
-        <ul class="type_films">
-          <li class="item_films" (click)="filterByCategory('Drama')"><h4>Drama</h4></li>
-          <li class="item_films" (click)="filterByCategory('Action')"><h4>Action</h4></li>
-          <li class="item_films" (click)="filterByCategory('Comedy')"><h4>Comedy</h4></li>
-          <li class="item_films" (click)="filterByCategory('Horror')"><h4>Horror</h4></li>
-          <li class="item_films" (click)="filterByCategory('Science')"><h4>Science</h4></li>
-          <li class="item_films" (click)="filterByCategory('Fantasy')"><h4>Fantasy</h4></li>
-        </ul>
-      </div>
+<div class="body">
+  <div class="nav">
+    <div class="nav-film">
+      <h3 ><a routerLink="/add" class="new_film"> <b>Add Film</b></a></h3>
+    </div>
+    <div class="nav-item">
+      <input type="text" placeholder="Search..." class="searchInput" #filter>
+      <button type="button" (click)="filterName(filter.value)"><i class="fas fa-search" style="font-size: 15px;"></i></button>
+    </div>
+    <ul class="type_films">
+      <li class="item_films" (click)="filterByCategory('Drama')"><h4>Drama</h4></li>
+      <li class="item_films" (click)="filterByCategory('Action')"><h4>Action</h4></li>
+      <li class="item_films" (click)="filterByCategory('Comedy')"><h4>Comedy</h4></li>
+      <li class="item_films" (click)="filterByCategory('Horror')"><h4>Horror</h4></li>
+      <li class="item_films" (click)="filterByCategory('Science')"><h4>Science</h4></li>
+      <li class="item_films" (click)="filterByCategory('Fantasy')"><h4>Fantasy</h4></li>
+    </ul>
+    <div>
+      <h4 class="favorites" (click)="filterByFavorites('false')"><b style="margin-right: 5px;">Favorites</b>
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+      </svg></h4>
+    </div>
+  </div>
     <section class="film-list">
-        <app-films-item *ngFor="let film of filmlist" [film_item]="film" ></app-films-item>
+        <app-films-item *ngFor="let film of filmlist" [film_item]="film" (deletedFilm)="handleDeletedFilm($event)" ></app-films-item>
     </section>
   </div>

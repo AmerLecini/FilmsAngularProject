@@ -1,5 +1,5 @@
 import { Injectable, Input } from '@angular/core';
-import { FilmsModel } from './films_model';
+import { FilmsModel } from '../models/films_model';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -37,5 +37,9 @@ export class FilmsService {
 
   getFilmByCategory(category: string) {
     return this.http.get<FilmsModel[]>(this.url + '?category=' + category);
+  }
+
+  getFavoriteFilm(favorite: string) {
+    return this.http.get<FilmsModel[]>(this.url + '?favorites=' + favorite);
   }
 }

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FilmsModel } from '../films_model';
-import { FilmsService } from '../films.service';
+import { FilmsModel } from '../models/films_model';
+import { FilmsService } from '../services/films.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -51,6 +51,17 @@ export class HomeComponent implements OnInit {
     this.filmService.getFilmsFromApi().subscribe((data) => {
       this.filmlist = data;
     });
+  }
+
+  filterByFavorites(favorite: string) {
+    this.filmService.getFavoriteFilm(favorite).subscribe((data) => {
+      this.filmlist = data;
+    });
+  }
+
+  handleDeletedFilm(id: number) {
+    console.log('Film with this id ' + id + ' is deleted');
+    this.filmlist = this.filmlist.filter((film) => film.id !== id);
   }
 
   goToDetails(id: number) {

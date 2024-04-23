@@ -1,21 +1,26 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-6">
-      <div class="image">
-        <img [src]="filmsModel.imageUrl" class="img-responsive" alt="Film Image" />
-      </div>
-      <div class="row">
-        <div class="col-xs-6">
-          <ul class="list-group">
-            <li class="list-group-item">Name: {{ filmsModel.name }}</li>
-            <li class="list-group-item">Description: {{ filmsModel.description }}</li>
-            <li class="list-group-item">Type: {{ filmsModel.category }}</li>
-            <li class="list-group-item">State: {{ filmsModel.state }}</li>
-            <li class="list-group-item">Release Year: {{ filmsModel.releayseYear }}</li>
-          </ul>
-        </div>
-      </div>
-      <button class="btn btn-primary" (click)="goToHome()">Close</button>
-    </div>
+<div class="body">
+  <div class="container">
+  <article>
+      <img class="listing-photo" [src]="filmsModel.imageUrl"
+        alt="Exterior photo of {{filmsModel.name}}"/>
+      <section class="listing-description">
+        <h1 class="listing-heading"><b>{{filmsModel.name}}</b></h1>
+      </section><br><br>
+      <section class="listing-features">
+        <h2 class="section-heading"><b>About this film</b></h2>
+        <ul>
+          <li><h3>Category :{{filmsModel.category}}</h3></li>
+          <li><h3> Place where the move is played {{filmsModel.state}}</h3></li>
+          <li><h3>Year where is publiced: {{filmsModel.releayseYear}}</h3></li>
+        </ul>
+      </section>
+      <section class="listing-apply">
+        <h2 class="section-heading"><b>Short description about this movie</b></h2>
+         <h3>{{filmsModel.description}}</h3>
+      </section>
+    </article>
+    <div class="button">
+    <button class="btn btn-primary" (click)="goToHome()">Cancel</button>
   </div>
-</div>
+  </div>
+  </div>

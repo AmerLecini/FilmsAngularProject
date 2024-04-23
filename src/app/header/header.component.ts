@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FilmsModel } from '../films_model';
+import { FilmsModel } from '../models/films_model';
 import { Router } from '@angular/router';
-import { AuthService } from '../login/auth.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-header',

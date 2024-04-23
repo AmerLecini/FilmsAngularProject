@@ -1,10 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
-import { User } from './user.model';
-import { AuthService } from './auth.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -22,12 +19,25 @@ export class LoginComponent {
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      email: ['', Validators.required],
-      password: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
     });
   }
 
   onSubmit() {
+    if (this.loginForm.invalid) {
+      if (this.loginForm.hasError('required', ['email', 'password'])) {
+        alert('Please enter both email and password.');
+      } else if (this.loginForm.hasError('minlength', 'password')) {
+        alert('Password must be at least 8 characters long.');
+      } else if (this.loginForm.hasError('email', 'email')) {
+        alert('Please enter a valid email address.');
+      } else {
+        alert('Please enter valid email and password.');
+      }
+      return;
+    }
+
     const email = this.loginForm.value.email;
     const password = this.loginForm.value.password;
     this.authService.login(email, password).subscribe((loggedIn) => {

@@ -6,8 +6,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { FilmsService } from 'src/app/films.service';
-import { FilmsModel } from 'src/app/films_model';
+import { FilmsService } from 'src/app/services/films.service';
+import { FilmsModel } from 'src/app/models/films_model';
 
 @Component({
   selector: 'app-edit-films',

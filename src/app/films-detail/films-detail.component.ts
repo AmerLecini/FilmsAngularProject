@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FilmsModel } from '../films_model';
-import { FilmsService } from '../films.service';
+import { FilmsModel } from '../models/films_model';
+import { FilmsService } from '../services/films.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -19,8 +19,6 @@ export class FilmsDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((param) => {
-      console.log('ktu: ' + param['filmId']);
-
       const filmId = param['filmId'];
       this.getFilmsById(filmId);
     });
@@ -29,7 +27,6 @@ export class FilmsDetailComponent implements OnInit {
   getFilmsById(id: number) {
     this.filmsService.getFilmsById(id).subscribe((data) => {
       this.filmsModel = data;
-      console.log(data);
     });
   }
 
