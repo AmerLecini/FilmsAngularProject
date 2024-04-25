@@ -33,8 +33,7 @@ button{
 .navItem{
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-left: 50px;
+
 }
 
 .type_films {
@@ -53,12 +52,16 @@ button{
   justify-content: center;
   align-items: center;
 }
+.inline{
+  display: inline;
+}
 
 .new_film{
  color: #fff;
 }
 
 .favorites{
+  margin-left: 30px;
   cursor: pointer;
 }
 
